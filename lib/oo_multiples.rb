@@ -16,13 +16,7 @@ class Multiples
   end
 
   def sum_multiples
-    sum = 0
-
-    collect_multiples.each do |num|
-      sum += num
-    end
-
-    sum
+    collect_multiples.reduce(0, :+)
   end
 
 end

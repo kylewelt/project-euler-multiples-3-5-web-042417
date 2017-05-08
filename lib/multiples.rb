@@ -10,11 +10,5 @@ def collect_multiples(limit)
 end
 
 def sum_multiples(limit)
-  sum = 0
-
-  collect_multiples(limit).each do |num|
-    sum += num
-  end
-
-  sum
+  collect_multiples(limit).reduce(0, :+)
 end
